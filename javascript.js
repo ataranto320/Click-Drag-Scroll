@@ -16,6 +16,9 @@ slider.addEventListener("mouseup", () => {
 });
 
 slider.addEventListener("mousemove", () => {
-    console.log(isDown);
-    console.log("do work");
+    // stop the function from running
+    if (!isDown) return; 
+    console.count(isDown);
+    // console.log(isDown);
+    // console.log("do work");
 });
