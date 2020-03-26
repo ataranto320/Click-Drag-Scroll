@@ -29,7 +29,10 @@ slider.addEventListener("mousemove", (e) => {
     const x = e.pageX - slider.offsetLeft;
     // console.log({x, startX});
     const walk = x - startX;
-    console.log(walk);
+    // or 
+    // const walk = (x - startX) * 3;
+    slider.scrollLeft = scrollLeft - walk;
+    // console.log(walk);
     // console.count(isDown);
     // console.log(startX);
     // console.log(isDown);
