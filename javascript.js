@@ -22,9 +22,14 @@ slider.addEventListener("mouseup", () => {
     slider.classList.remove("active");
 });
 
-slider.addEventListener("mousemove", () => {
+slider.addEventListener("mousemove", (e) => {
     // stop the function from running
     if (!isDown) return; 
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    // console.log({x, startX});
+    const walk = x - startX;
+    console.log(walk);
     // console.count(isDown);
     // console.log(startX);
     // console.log(isDown);
